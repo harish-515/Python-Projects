@@ -1,2 +1,2 @@
 # learn_python
-python learning
+Python Mega Course - Udemy by Ardit Sulce
