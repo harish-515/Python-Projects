@@ -17,10 +17,11 @@ def get_the_meaning(w):
             return "We didn't understand your entry."        
     else:
         return "The word dosn't exist. Please double check it"    
-
-
-
-
-
+ 
 word = input("Enter a word: ") 
-print(get_the_meaning(word))
+output = get_the_meaning(word)
+if type(output) == list:
+    for item in output:
+        print(item)
+else:
+    print(output)            
