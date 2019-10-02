@@ -53,4 +53,8 @@
                          |----|----------- Our application main python script name  
                               |----------- Our application app variable name
       3. runtime.txt
-        mention the python version on which the heroku should deploy the application                        
+        mention the python version on which the heroku should deploy the application
+
+  heroku git:remote --app "appname"
+  
+                                  
