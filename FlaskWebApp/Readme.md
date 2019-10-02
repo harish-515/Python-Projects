@@ -35,3 +35,22 @@
 # Using Requirements.txt
     As we cant have the entire virtual environment in the repository we make use of requirements.txt.
     Create a new virtual environment. And install the necessary package mentioned in the requirements.
+
+# Deploying in Heroku
+    Create Heroku Account
+    Create a new App in Heroku
+    Download heroku Toolbelt for command line instructions for windows
+    Open command line in the MyApp folder
+    Heroku Login from command line
+        "heroku create 'AppName'"
+    Uploading of files to Heroku using git
+    Require 3 Files for the same 
+      1. Requirements.txt
+      2. Procfile
+        web: gunicorn script:app
+          |-----|--------|----|----------- Web eerver to host the application
+                |--------|----|----------- Web server details "gunicorn"
+                         |----|----------- Our application main python script name  
+                              |----------- Our application app variable name
+      3. runtime.txt
+        mention the python version on which the heroku should deploy the application                        
