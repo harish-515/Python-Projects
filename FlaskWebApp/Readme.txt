@@ -27,3 +27,11 @@ Creating a virtual environment
         --Scripts                    |          python -m venv virtual
         --pyvenv.cfg              ---
 
+Creating Requirements.txt
+    Once done with importing then necessary modules into the newly created virtual environment.
+    use "pip freeze >> requirements.txt" to get the necessary modules. For later use to set the
+    web app.
+
+Using Requirements.txt
+    As we cant have the entire virtual environment in the repository we make use of requirements.txt.
+    Create a new virtual environment. And install the necessary package mentioned in the requirements.
