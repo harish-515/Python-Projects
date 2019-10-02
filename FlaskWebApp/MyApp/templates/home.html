@@ -1,0 +1,21 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Home Page..</h1>
+        <p>This is for testing.</p>
+    </body>
+</html>
+Child template must be placed under a div tag
+must extend the parent layout html with the content overridden
+-->
+{%extends "layout.html" %}
+{%block content%}
+<div class="home">
+    <h1>My homepage</h1>
+    <p>This is a test website.</p>
+</div>
+{%endblock%}
