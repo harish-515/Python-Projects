@@ -43,18 +43,19 @@
     Open command line in the MyApp folder
     Heroku Login from command line
         "heroku create 'AppName'"
-    Uploading of files to Heroku using git
-    Require 3 Files for the same 
+
+    Require 3 files to deploy the app on heroku 
       1. Requirements.txt
       2. Procfile
         web: gunicorn script:app
-          |-----|--------|----|----------- Web eerver to host the application
+          |-----|--------|----|----------- Web server to host the application
                 |--------|----|----------- Web server details "gunicorn"
                          |----|----------- Our application main python script name  
                               |----------- Our application app variable name
       3. runtime.txt
         mention the python version on which the heroku should deploy the application
-
-  heroku git:remote --app "appname"
+    Uploading of files to Heroku using git
+      To upload the source files to heroku we need to use GIT.Initialize a git repository.   
+      heroku git:remote --app "appname"
   
                                   
