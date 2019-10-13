@@ -56,6 +56,6 @@
         mention the python version on which the heroku should deploy the application
     Uploading of files to Heroku using git
       To upload the source files to heroku we need to use GIT.Initialize a git repository.   
-      heroku git:remote --app "appname"
+      Adding heroku as remote repository -- heroku git:remote --app "appname"
   
                                   
