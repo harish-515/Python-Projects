@@ -12,7 +12,9 @@ Delete
 Close
 """
 from tkinter import *
-import bookstore_backend
+from bookstore_backend import Database
+
+database = Database()
 
 def get_selected_row(event):
     global selected_tuple
@@ -33,29 +35,25 @@ def get_selected_row(event):
 
 def view_command():
     list1.delete(0,END)
-    for row in bookstore_backend.view():
+    for row in database.view():
         list1.insert(END,row)
 
 def search_command():
     list1.delete(0,END)
-    for row in bookstore_backend.search(titletext.get(),authortext.get(),yeartext.get(),isbntext.get()):
+    for row in database.search(titletext.get(),authortext.get(),yeartext.get(),isbntext.get()):
         list1.insert(END,row)
 
 def addentry_command():
-    bookstore_backend.insert(titletext.get(),authortext.get(),yeartext.get(),isbntext.get())
+    database.insert(titletext.get(),authortext.get(),yeartext.get(),isbntext.get())
     search_command()
 
 def update_command():
-    bookstore_backend.update(selected_tuple[0],titletext.get(),authortext.get(),yeartext.get(),isbntext.get())
+    database.update(selected_tuple[0],titletext.get(),authortext.get(),yeartext.get(),isbntext.get())
     view_command()
 
 def delete_command():
-    bookstore_backend.delete(selected_tuple[0])
+    database.delete(selected_tuple[0])
     view_command()
-
-def close_command():
-    window 
-
 
 window = Tk()
 
